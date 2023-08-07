@@ -1,5 +1,5 @@
 $(() => {
-    $.post('https://jav_spawn/info')
+    $.post('https://j-spawn/info')
 
     var audio_click = new Audio('sounds/sound_2.ogg');
     var audio_song = new Audio('sounds/sound_1.mp3');
@@ -258,7 +258,7 @@ $(() => {
             $(audio_song).animate({ volume: 0 });
             setTimeout(function() {
                 $('body').hide();
-                $.post('https://jav_spawn/salir', JSON.stringify({}));
+                $.post('https://j-spawn/salir', JSON.stringify({}));
             }, 500)
         } , 1500)
     };
