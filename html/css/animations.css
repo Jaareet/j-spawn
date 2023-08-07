@@ -1,0 +1,116 @@
+@keyframes anim2 {
+    0%{
+        opacity: 0;
+        transform: translateY(1vw);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0vw);
+    }
+}
+
+@keyframes anim3 {
+    0%{
+        opacity: 0;
+        transform: translateY(-1vw);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0vw);
+    }
+}
+
+@keyframes anim {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+}
+
+@keyframes anim-letters {
+    0%{
+        opacity: 0;
+        transform: translateY(-.2vw);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0vw); 
+    }
+}
+
+@keyframes anim-boton {
+    0% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.0);
+        opacity: 1;
+    }
+}
+
+@keyframes anim-boton-salida {
+    0% {
+        transform: scale(1.0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes anim-not{
+    0%{
+        transform:translateY(25vw);
+        opacity:0;
+    }
+    100%{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+@keyframes consejo-in{
+    0%{
+        opacity:0;
+        transform:translateX(25vw);
+    }
+    100%{
+        opacity:1;
+        transform:translateX(0);
+
+    }
+}
+
+@keyframes consejo-out{
+    0%{
+        opacity:1;
+        transform:translateX(0);
+    }
+    100%{
+        opacity:0;
+        transform:translateX(25vw);
+
+    }
+}
+
+.scale-out {
+    animation: anim-boton-salida .25s forwards;
+    opacity: 100;
+}
+
+.scale-in {
+    animation: anim-boton .25s ease-in-out forwards;
+    opacity: 100;
+}
+
+.consejo-in{
+    animation: consejo-in 1s forwards;
+}
+
+.consejo-out{
+    animation: consejo-out 1s forwards;
+}

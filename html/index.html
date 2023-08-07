@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spawn Menu</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <div class="menu">
+
+        <div class="fondo">
+
+            <div class="inicio">
+                <div class="barra-carga">
+                    <img src="carga.svg">
+                    <p id="texto-carga">Cargando tu información</p>
+                </div>
+            </div>
+
+            <div class="consejos">
+                <div class="titulo-consejo"><ion-icon name="information-circle" style="position: relative; top: .15vw; margin-right: .4vw;"></ion-icon>Consejo</div>
+                <p class="info-consejo">Recuerda mandar un entorno siempre que hagas cualquier delito!</p>
+            </div>
+
+            <div class="boxes">
+                <div class="box" id="box-2">
+                    <ion-icon name="book" id="icon-p"></ion-icon>
+                    <div class="texto" id="personaje">Normativa</div>
+                </div>
+                <div class="box" id="box-3">
+                    <ion-icon name="document-text" id="icon-p"></ion-icon>
+                    <div class="texto" id="personaje">Comandos</div>
+                </div>
+                <div class="box" id="box-1">
+                    <ion-icon name="person" id="icon-p"></ion-icon>
+                    <div class="texto" id="personaje">Personaje</div>
+                </div>
+                <div class="box" id="box-4">
+                    <ion-icon name="newspaper" id="icon-p"></ion-icon>
+                    <div class="texto" id="personaje">Noticias</div>
+                </div>
+                <div class="box" id="box-5">
+                    <ion-icon name="pricetags" id="icon-p"></ion-icon>
+                    <div class="texto" id="personaje">Tienda</div>
+                </div>
+            </div>
+
+            <div class="container-personaje" id="containers">
+                <div class="titulo-per">Mi personaje</div>
+                <div class="chaotic-orbit" id="loader"></div>
+                <div class="info-p">
+                    <p id="info-p" class="nombre">Nombre : Sin informacion</p>
+                    <p id="info-p" class="sexo">Sexo : Sin informacion</p>
+                    <p id="info-p" class="nacimiento">Fecha nacimiento : Sin informacion</p>
+                    <p id="info-p" class="trabajo">Trabajo : Sin informacion</p>
+                    <button class="entrar">Acceder</button>
+                </div>
+                <div class="volver-p">Volver</div>
+            </div>
+            <div class="container-normativa" id="containers">
+                <div class="parte-arriba-norm"><span><ion-icon name="arrow-undo" id="icon-norm"></ion-icon></span><span class="texto-norm">Normativa principal</span></div>
+                <div class="container-normas"></div>
+            </div>
+
+            <div class="box-containers container-comandos">
+                <div class="parte-arriba-com"><span><ion-icon name="arrow-undo" id="icon-norm" class="volver-com"></ion-icon></span><span class="texto-norm">Comandos</span></div>
+                <ul class="container-info-c"></ul>
+            </div>
+
+            <div class="box-containers container-noticias">
+                <div class="noticias">
+                    <div class="parte-arriba-not"><span><ion-icon name="arrow-undo" id="icon-norm" class="volver-not"></ion-icon></span><span class="texto-norm">Noticias que podrian interesarte</span></div>
+                    <div class="videos"></div>
+                    <div class="parte-abajo-not">
+                        <div class="discord" id="container-abajo"><ion-icon name="logo-discord" style="position: relative; color: rgb(252, 252, 252);top: .2vw; margin-right: .35vw;"></ion-icon>Discord</div>
+                        <div class="web" id="container-abajo"><ion-icon name="star" style="position: relative; color: rgb(252, 252, 252);top: .2vw; margin-right: .35vw;"></ion-icon>https://jaareet.es/discord</div>
+                        <div class="twitter" id="container-abajo"><ion-icon name="logo-twitter" style="position: relative; color: rgb(252, 252, 252);top: .2vw; margin-right: .35vw;"></ion-icon>Twitter</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box-containers container-tienda">
+                <div class="tienda">
+                    <div class="parte-arriba-tien"><span><ion-icon name="arrow-undo" id="icon-norm" class="volver-tien"></ion-icon></span><span class="texto-norm">Tienda</span></div>
+                    <div class="info-tienda"><i class="fa-solid fa-square-info"></i>De click a lo que quiera adquirir y se le le dara acceso a su compra</div>
+                    <div class="todo-tienda">
+                        <div class="item">
+                            <div class="titulo-item">Coche donador 1</div>
+                            <img class="foto-item" src="./img/img_tienda_1.jpg">
+                        </div>
+                        <div class="item">
+                            <div class="titulo-item">Coche donador 2</div>
+                            <img class="foto-item" src="./img/img_tienda_2.jpg">
+                        </div>
+                        <div class="item">
+                            <div class="titulo-item">Bandas</div>
+                            <img class="foto-item" src="./img/img_tienda_3.jpg">
+                        </div>
+                        <div class="item">
+                            <div class="titulo-item">Mafias</div>
+                            <img class="foto-item" src="./img/img_tienda_4.jpg">
+                        </div>
+                        <div class="item">
+                            <div class="titulo-item">Misiones Mafias</div>
+                            <img class="foto-item" src="./img/img_tienda_5.jpg">
+                        </div>
+                        <div class="item">
+                            <div class="titulo-item">Misiones VIP</div>
+                            <img class="foto-item" src="./img/img_tienda_6.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sonido">
+                <ion-icon name="volume-high" class="icono-v" id="sonando"></ion-icon>
+                <ion-icon name="volume-mute" class="icono-v" id="mute"></ion-icon>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
